@@ -18,6 +18,8 @@
                 <select id="znak" class="form-control">
                     <option value="+">Dodawanie</option>
                     <option value="-">Odejmowanie</option>
+                    <option value="*">Mnożenie</option>
+                    <option value="/">Dzielenie</option>
                 </select>
             </div>
             <div class="col-md-4">
@@ -45,8 +47,14 @@
             var wynik;
             if (znak === '+') {
                 wynik = liczba1 + liczba2;
-            } else if (znak === '-') {
+            } else (znak === '-') {
                 wynik = liczba1 - liczba2;
+            }
+            else (znak === '*') {
+                wynik = liczba1 * liczba2;
+            }
+            else if (znak === '/') {
+                wynik = liczba1 / liczba2;
             }
             
             document.getElementById('wynik').value = wynik;
