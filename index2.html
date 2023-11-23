@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- Deklaracja typu dokumentu, informuje przeglądarkę, że jest to dokument HTML5 -->
+<html> <!-- Początek dokumentu HTML -->
+<head> <!-- Sekcja nagłówka, zawiera informacje o dokumencie, takie jak style i skrypty -->
+    <style> <!-- Początek sekcji stylów CSS, która definiuje wygląd elementów na stronie -->
+        body { /* Styl dla całego ciała dokumentu */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Określenie rodzaju czcionki */
+            margin: 0; /* Usunięcie domyślnego marginesu */
+            padding: 0; /* Usunięcie domyślnego wypełnienia */
+            background-color: #1c1c1e; /* Ustawienie koloru tła */
+            color: #ffffff; /* Ustawienie koloru tekstu */
+        }
+        .header { /* Styl dla nagłówka strony */
+            display: flex; /* Używanie elastycznego box modelu do układania elementów */
+            justify-content: center; /* Wycentrowanie elementów w poziomie */
+            align-items: center; /* Wycentrowanie elementów w pionie */
+            position: relative; /* Pozycjonowanie względem innych elementów */
+            background-color: #2c2c2e; /* Ustawienie koloru tła nagłówka */
+            padding: 20px; /* Ustawienie wewnętrznego wypełnienia */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Dodanie cienia do nagłówka */
+        }
+        .title { /* Styl dla tytułu w nagłówku */
+            font-size: 24px; /* Ustawienie wielkości czcionki */
+            font-weight: bold; /* Ustawienie pogrubionej czcionki */
+        }
+        .clock { /* Styl dla zegara */
+            position: absolute; /* Absolutne pozycjonowanie względem rodzica */
+            right: 20px; /* Odstęp od prawej krawędzi rodzica */
+            font-size: 26px; /* Wielkość czcionki zegara */
+            background-color: #3a3a3c; /* Kolor tła zegara */
+            padding: 5px 10px; /* Wewnętrzne wypełnienie zegara */
+            border-radius: 15px; /* Zaokrąglenie rogów zegara */
+        }
+        @media (max-width: 600px) { /* Styl dla ekranów o szerokości maksymalnie 600px */
+            .title { /* Styl dla tytułu na mniejszych ekranach */
+                font-size: 18px; /* Mniejsza czcionka dla tytułu */
+            }
+            .clock { /* Styl dla zegara na mniejszych ekranach */
+                font-size: 14px; /* Mniejsza czcionka dla zegara */
+            }
+        }
+    </style>
+</head>
+<body> <!-- Początek głównego ciała dokumentu -->
+    <header class="header"> <!-- Nagłówek strony z zastosowaniem wcześniej zdefiniowanego stylu 'header' -->
+        <div class="title">Plan Zajeć</div> <!-- Tytuł w nagłówku z zastosowaniem stylu 'title' -->
+        <div id="clock" class="clock"></div> <!-- Miejsce na zegar z zastosowaniem stylu 'clock' -->
+    </header>
+    <script> <!-- Początek skryptu JavaScript -->
+        function updateClock() { /* Definicja funkcji 'updateClock' do aktualizacji zegara */
+            var now = new Date(); /* Utworzenie nowego obiektu daty i czasu */
+            var hours = now.getHours(); /* Pobranie aktualnej godziny */
+            var minutes = now.getMinutes(); /* Pobranie aktualnych minut */
+            var seconds = now.getSeconds(); /* Pobranie aktualnych sekund */
+            minutes = minutes < 10 ? '0' + minutes : minutes; /* Dodanie zera przed minutami, jeśli są mniejsze niż 10 */
+            seconds = seconds < 10 ? '0' + seconds : seconds; /* Dodanie zera przed sekundami, jeśli są mniejsze niż 10 */
+            document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds; /* Aktualizacja treści zegara */
+            setTimeout(updateClock, 1000); /* Ponowne wywołanie funkcji co 1000ms (1 sekunda) */
+        }
+        updateClock(); /* Pierwsze wywołanie funkcji, aby zainicjować zegar */
+    </script>
+</body>
+</html>
