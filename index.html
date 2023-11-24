@@ -1,64 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kalkulator</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Lekcji</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Kalkulator</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <input type="text" id="liczba1" class="form-control" placeholder="Liczba 1">
-            </div>
-            <div class="col-md-4">
-                <select id="znak" class="form-control">
-                    <option value="+">Dodawanie</option>
-                    <option value="-">Odejmowanie</option>
-                    <option value="*">Mnożenie</option>
-                    <option value="/">Dzielenie</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-                <input type="text" id="liczba2" class="form-control" placeholder="Liczba 2">
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-4 offset-md-4">
-                <button onclick="kalkulator()" class="btn btn-primary btn-block">Oblicz</button>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-4 offset-md-4">
-                <input type="text" id="wynik" class="form-control" placeholder="Wynik" readonly>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function kalkulator() {
-            var liczba1 = parseFloat(document.getElementById('liczba1').value);
-            var liczba2 = parseFloat(document.getElementById('liczba2').value);
-            var znak = document.getElementById('znak').value;
-            
-            var wynik;
-            if (znak === '+') {
-                wynik = liczba1 + liczba2;
-            } else if (znak === '-') {
-                wynik = liczba1 - liczba2;
-            }
-            else if (znak === '*') {
-                wynik = liczba1 * liczba2;
-            }
-            else if (znak === '/') {
-                wynik = liczba1 / liczba2;
-            }
-            
-            document.getElementById('wynik').value = wynik;
-        }
-    </script>
+    <h1>Plan Lekcji</h1>
+    <div id="planLekcji"></div>
+    <div id="zegar"></div>
+    <script src="script.js"></script>
 </body>
 </html>
