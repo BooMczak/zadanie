@@ -1,0 +1,44 @@
+Programowanie
+"Wprowadzenie do Programowania w Pythonie"
+
+Podstawy składni Pythona
+Przykłady prostych programów
+Wprowadzenie do bibliotek, takich jak NumPy i Pandas
+Mini-projekt: prosty kalkulator lub gra
+"Zarządzanie Wersjami z Git i GitHub"
+
+Podstawy Git: commit, branch, merge
+Używanie GitHub do współpracy
+Przykłady workflow w Git (np. Git Flow)
+Studium przypadku: rozwiązanie konfliktów wersji
+"Wzorce Projektowe w Programowaniu Obiektowym"
+
+Wprowadzenie do wzorców projektowych
+Szczegółowa analiza wybranych wzorców (np. Singleton, Factory, Observer)
+Przykłady zastosowania wzorców w różnych językach programowania
+Case study: refaktoryzacja istniejącego kodu
+Informatyka
+"Sztuczna Inteligencja i Jej Zastosowania"
+
+Wprowadzenie do AI i uczenia maszynowego
+Przegląd głównych algorytmów AI
+Zastosowania AI w różnych branżach (np. medycyna, finanse)
+Etyczne aspekty AI
+"Bezpieczeństwo Cybernetyczne w Dzisiejszym Świecie"
+
+Podstawy bezpieczeństwa cybernetycznego
+Przegląd najczęstszych ataków cybernetycznych
+Strategie obronne i narzędzia bezpieczeństwa
+Case study: analiza znanych ataków cybernetycznych
+"Przetwarzanie i Analiza Danych Wielkich"
+
+Wprowadzenie do Big Data
+Narzędzia do przetwarzania dużych zbiorów danych (np. Hadoop, Spark)
+Wizualizacja i analiza danych
+Studium przypadku: zastosowanie Big Data w biznesie
+"Sieci Komputerowe i Protokoły Internetowe"
+
+Podstawy sieci komputerowych
+Przegląd głównych protokołów internetowych (TCP/IP, HTTP, FTP)
+Bezpieczeństwo w sieciach
+Przyszłość sieci: Internet Rzeczy (IoT) i sieci 5G
